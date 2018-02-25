@@ -12,3 +12,30 @@ def index(request):
     }
     return HttpResponse(template.render(context, request))
 
+def usrDashboard(request):
+    template = loader.get_template('main/usr_dashboard.html')
+    context = {
+        'user': { 'user_type': 1 },
+    }
+    return HttpResponse(template.render(context, request))
+
+def ptrDashboard(request):
+    template = loader.get_template('main/ptr_dashboard.html')
+    context = {
+        'user': { 'user_type': 2 },
+    }
+    return HttpResponse(template.render(context, request))
+
+def crtDashboard(request):
+    template = loader.get_template('main/crt_dashboard.html')
+    context = {
+        'user': { 'user_type': 3 },
+    }
+    return HttpResponse(template.render(context, request))
+
+def contractDetail(request):
+    template = loader.get_template('main/contract_detail.html')
+    context = {
+
+    }
+    return HttpResponse(template.render(context, request))

@@ -1,0 +1,55 @@
+/**  COLOR CODES
+
+Main Dark Blue: #2F5597;
+Light Blue: 3F73CC;
+Lightest Blue: 4F90FF;
+Pink: FF7E69;
+Dark Green: 8DB22F;
+Dark Grey: #333333;
+Light Grey: #858585;
+Lightest Grey for BG: rgba(242,242,242);
+
+
+**/
+
+h1, h2, h3, h4, h5, p {
+	color: #858585;
+}
+
+body {
+	margin: 0px;
+	padding: 0px;
+	background-color: rgba(242,242,242,1);
+}
+
+a {
+	color: #2F5597;
+	text
+}
+
+a:hover {
+	color: #3F73CC;
+}
+
+#navbar {
+	width: 100%;
+	height: 50px;
+	padding: 0px
+	margin: 0px;
+	display: inline-block;
+	background-color: rgba(242,242,242,1);
+}
+
+#logo {
+	position: absolute;
+	left: 10px;
+	top: 15px;
+	max-height: 25px;
+}
+
+.container {
+	display: inline-block;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	background-color: #ffffff;
+}
