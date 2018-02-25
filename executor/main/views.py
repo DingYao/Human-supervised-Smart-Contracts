@@ -82,7 +82,8 @@ def contractDetail(request):
                      'Owner Supervision': 'Revoke Only',
                      'Protector Supervision': 'Approval Only',
                      'SIAC Supervision': 'Revise Only',
-                    }
+                    },
+        'powers' : ['Revoke', 'Request Protector Review','Request SIAC Review']
 
     }
     return HttpResponse(template.render(context, request))
