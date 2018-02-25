@@ -8,17 +8,21 @@
 	{% block dashboard %}
 	<div class='dashboard'>
 
-		<div class='notifs'>
-			<div class = 'notifs-left mui-panel'>
-				<legend>Your Notifications</legend>
-				{% block notifs %}
-				{% endblock %}
+		<div class = 'dashboard-aligner'>
+
+			<div class='notifs'>
+				<div class = 'notifs-left mui-panel'>
+					<legend>Your Notifications</legend>
+					{% block notifs %}
+					{% endblock %}
+				</div>
+				<div class = 'notifs-right mui-panel'>
+					<legend>Quick Actions</legend>
+					{% block quick-actions %}
+					{% endblock %}
+				</div>
 			</div>
-			<div class = 'notifs-right mui-panel'>
-				<legend>Quick Actions</legend>
-				{% block quick-actions %}
-				{% endblock %}
-			</div>
+
 		</div>
 
 		<div class='contracts-list mui-panel'>

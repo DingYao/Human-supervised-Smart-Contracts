@@ -6,12 +6,12 @@
 
 {% block notifs %}
 {% for notif in user.notifications %}
-<button class="mui-btn mui-btn--primary" id='notif'>{{ notif }}...</button>
+<a href='/contract/jorda'><button class="mui-btn mui-btn--primary" id='notif'>{{ notif }}...</button></a>
 {% endfor %}
 {% endblock %}
 {% block quick-actions %}
 {% for action in user.actions %}
-<button class="mui-btn mui-btn--danger" id='action'>{{ action }}</button>
+<a href='/contract/jorda'><button class="mui-btn mui-btn--danger" id='action'>{{ action }}</button></a>
 {% endfor %}
 {% endblock %}
 {% block contract_list %}
@@ -33,8 +33,8 @@
 				<td>{{ contract.date_created }}</td>
 				<td>{{ contract.current_balance }}</td>
 				<td>{{ contract.latest_event }}</td>
-				<td><b>Alter | Revoke</b></td>
-				<td><a><u>Details</u></a></td>
+				<td><a>Alter</a> | <a>Revoke</a></td>
+				<td><a>Details</a></td>
 			</tr>
 		{% endfor %}
   </tbody>

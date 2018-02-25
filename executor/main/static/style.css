@@ -75,6 +75,10 @@ legend {
 	width: 100%;
 	height: 1000px;
 }
+
+.dashboard-aligner {
+	width: 85%;
+}
 .notifs-left {
 	position: absolute;
 	top: 150px;
