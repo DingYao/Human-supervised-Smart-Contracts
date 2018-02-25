@@ -5,10 +5,16 @@
 {% endblock %}
 
 {% block notifs %}
-<h4>Your Notifications</h4>
+{% for notif in user.notifications %}
+<button class="mui-btn mui-btn--primary" id='notif'>{{ notif }}...</button>
+{% endfor %}
 {% endblock %}
 {% block quick-actions %}
-<h4>Quick Actions</h4>
+{% for action in user.actions %}
+<button class="mui-btn mui-btn--danger" id='action'>{{ action }}</button>
+{% endfor %}
 {% endblock %}
 {% block contract_list %}
+<legend>Your Contracts</legend>
+
 {% endblock %}
