@@ -18,4 +18,27 @@
 <h4>Quick Actions</h4>
 {% endblock %}
 {% block contract_list %}
+<table class="mui-table">
+  <thead>
+    <tr>
+      <th>Address</th>
+      <th>Date Created</th>
+      <th>Current Balance</th>
+      <th>Revelant Event</th>
+      <th colspan="2">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+		{% for contract in user.contracts %}
+			<tr>
+				<td>{{ contract.address }}</td>
+				<td>{{ contract.date_created }}</td>
+				<td>{{ contract.current_balance }}</td>
+				<td>{{ contract.latest_event }}</td>
+				<td><b>Alter | Revoke</b></td>
+				<td><button class='mui-btn'><u>Details</u></button></td>
+			</tr>
+		{% endfor %}
+  </tbody>
+</table>
 {% endblock %}

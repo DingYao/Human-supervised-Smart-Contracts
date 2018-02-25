@@ -26,8 +26,33 @@ def usrDashboard(request):
 
 def ptrDashboard(request):
     template = loader.get_template('main/ptr_dashboard.html')
+    contracts = [
+        {
+            'address': 'ujorda',
+            'date_created': '13/12/2099',
+            'current_balance': 'S$14,842.00',
+            'latest_event': 'Pending approval from requisite protectors',
+            'current_status': 'active',
+        },
+        {
+            'address': 'ea8ac',
+            'date_created': '13/12/2099',
+            'current_balance': 'S$19,018.00',
+            'latest_event': 'Upcoming disbursement in two (2) weeks',
+            'current_status': 'active',
+        },
+        {
+            'address': 'ea8ac',
+            'date_created': '13/06/2029',
+            'current_balance': 'S$392.00',
+            'latest_event': 'Disbursed S$1,000.00 last Thursday',
+            'current_status': 'revoked',
+        },
+    ]
     context = {
-        'user': { 'user_type': 2 },
+        'user': { 'user_type': 2,
+                  'contracts': contracts,
+                },
     }
     return HttpResponse(template.render(context, request))
 
