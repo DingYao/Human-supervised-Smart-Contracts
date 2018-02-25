@@ -4,22 +4,27 @@
 {% endblock %}
 
 {% block content %}
-	<div class='dashboard container'>
+	
 	{% block dashboard %}
+	<div class='dashboard mui-container'>
+
 		<div class='notifs'>
-			<div class = 'notifs-left container'>
-			{% block notifs %}
-			{% endblock %}
+			<div class = 'notifs-left mui-panel'>
+				{% block notifs %}
+				{% endblock %}
 			</div>
-			<div class = 'notifs-right container'>
-			{% block quick-actions %}
-			{% endblock %}
+			<div class = 'notifs-right mui-panel'>
+				
+				{% block quick-actions %}
+				{% endblock %}
 			</div>
 		</div>
-		<div class='contract-list container'>
-		{% block contract_list %}	
-		{% endblock %}
+
+		<div class='contract-list mui-panel'>
+			{% block contract_list %}	
+			{% endblock %}
 		</div>
-	{% endblock %}
 	</div>
+	{% endblock %}
+	
 {% endblock %}

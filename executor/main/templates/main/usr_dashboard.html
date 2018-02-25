@@ -1,16 +1,14 @@
 {% extends 'main/base_dashboard.html' %}
+
 {% block title %}
-<h3>Welcome, User u023812852321312313113!</h3>
+	<h3>Welcome, User u023812852321312313113.</h3>
 {% endblock %}
 
-{% block content %}
-	{% block dashboard %}
-		{% block notifs %}
-		{% endblock %}
-		{% block quick-actions %}
-		{% endblock %}
-		{% block contract_list %}
-
-		{% endblock %}
-	{% endblock %}
+{% block notifs %}
+<h4>Your Notifications</h4>
+{% endblock %}
+{% block quick-actions %}
+<h4>Quick Actions</h4>
+{% endblock %}
+{% block contract_list %}
 {% endblock %}
