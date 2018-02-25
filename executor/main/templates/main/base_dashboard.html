@@ -6,16 +6,20 @@
 {% block content %}
 	<div class='dashboard container'>
 	{% block dashboard %}
-		<div class='notifs container'>
-			<h3>Your Notifications</h3>
+		<div class='notifs'>
+			<div class = 'notifs-left container'>
 			{% block notifs %}
 			{% endblock %}
+			</div>
+			<div class = 'notifs-right container'>
+			{% block quick-actions %}
+			{% endblock %}
+			</div>
 		</div>
 		<div class='contract-list container'>
-		{% block contract_list %}
-		
+		{% block contract_list %}	
 		{% endblock %}
 		</div>
-	</div>
 	{% endblock %}
+	</div>
 {% endblock %}
