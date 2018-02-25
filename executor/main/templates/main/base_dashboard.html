@@ -6,21 +6,22 @@
 {% block content %}
 	
 	{% block dashboard %}
-	<div class='dashboard mui-container'>
+	<div class='dashboard'>
 
 		<div class='notifs'>
 			<div class = 'notifs-left mui-panel'>
+				<legend>Your Notifications</legend>
 				{% block notifs %}
 				{% endblock %}
 			</div>
 			<div class = 'notifs-right mui-panel'>
-				
+				<legend>Quick Actions</legend>
 				{% block quick-actions %}
 				{% endblock %}
 			</div>
 		</div>
 
-		<div class='contract-list mui-panel'>
+		<div class='contracts-list mui-panel'>
 			{% block contract_list %}	
 			{% endblock %}
 		</div>
