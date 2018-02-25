@@ -83,8 +83,32 @@ def ptrDashboard(request):
 
 def crtDashboard(request):
     template = loader.get_template('main/crt_dashboard.html')
+    contracts = [
+        {
+            'address': 'ujorda',
+            'date_created': '13/12/2099',
+            'current_balance': '$14,842.00',
+            'latest_event': 'Pending approval from requisite protectors',
+            'current_status': 'active',
+        },
+        {
+            'address': 'ea8ac',
+            'date_created': '13/12/2099',
+            'current_balance': '$19,018.00',
+            'latest_event': 'Upcoming disbursement in two (2) weeks',
+            'current_status': 'active',
+        },
+        {
+            'address': 'ea8ac',
+            'date_created': '13/06/2029',
+            'current_balance': '$392.00',
+            'latest_event': 'Disbursed S$1,000.00 last Thursday',
+            'current_status': 'revoked',
+        },
+    ]
     context = {
         'user': { 'user_type': 3, 
+                  'contracts': contracts,
                   'notifications': ['Contract 123ea has requested SIAC review citing: \"Help I forgot my private key\"', 
                                     'Contract glh18 has requested SIAC review citing: \"Please help me revoke a frustrated contract\"',
                                     'Contract h4xor has requested SIAC review citing: \"Monies paid out twice. Code is buggy\"', 
