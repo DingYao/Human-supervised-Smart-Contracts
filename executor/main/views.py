@@ -14,8 +14,32 @@ def index(request):
 
 def usrDashboard(request):
     template = loader.get_template('main/usr_dashboard.html')
+    contracts = [
+        {
+            'address': 'ujorda',
+            'date_created': '13/12/2099',
+            'current_balance': 'S$14,842.00',
+            'latest_event': 'Pending approval from requisite protectors',
+            'current_status': 'active',
+        },
+        {
+            'address': 'ea8ac',
+            'date_created': '13/12/2099',
+            'current_balance': 'S$19,018.00',
+            'latest_event': 'Upcoming disbursement in two (2) weeks',
+            'current_status': 'active',
+        },
+        {
+            'address': 'ea8ac',
+            'date_created': '13/06/2029',
+            'current_balance': 'S$392.00',
+            'latest_event': 'Disbursed S$1,000.00 last Thursday',
+            'current_status': 'revoked',
+        },
+    ]
     context = {
         'user': { 'user_type': 1, 
+                  'contracts': contracts,
                   'notifications': ['Contract u2039 has paid out $1000 to Justin as scheduled on 21/11/2017', 
                                     'Protector psd21 has begun reviewing Contract u2039', 
                                     ],

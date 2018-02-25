@@ -16,5 +16,27 @@
 {% endblock %}
 {% block contract_list %}
 <legend>Your Contracts</legend>
-
+<table class="mui-table">
+  <thead>
+    <tr>
+      <th>Address</th>
+      <th>Date Created</th>
+      <th>Current Balance</th>
+      <th>Revelant Event</th>
+      <th colspan="2">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+		{% for contract in user.contracts %}
+			<tr>
+				<td>{{ contract.address }}</td>
+				<td>{{ contract.date_created }}</td>
+				<td>{{ contract.current_balance }}</td>
+				<td>{{ contract.latest_event }}</td>
+				<td><b>Alter | Revoke</b></td>
+				<td><a><u>Details</u></a></td>
+			</tr>
+		{% endfor %}
+  </tbody>
+</table>
 {% endblock %}
