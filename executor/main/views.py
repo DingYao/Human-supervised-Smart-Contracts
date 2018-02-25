@@ -98,6 +98,38 @@ def crtDashboard(request):
 
 def contractDetail(request):
     template = loader.get_template('main/contract_detail.html')
+    gifts = [
+        {
+            'number': 1,
+            'recipient': 'Justin',
+            'type' : 'Periodic',
+            'description': 'S$50 every week',
+            'total': 'S$5,200',
+            'paid_out': 'S$350',
+            'remaining_to_pay': 'S$4,850',
+            'status': 'Active',
+        },
+        {
+            'number': 2,
+            'recipient': 'Bieber',
+            'type' : 'Lumpsum',
+            'description': 'S$250',
+            'total': 'S$250',
+            'paid_out': '-',
+            'remaining_to_pay': 'S$250',
+            'status': 'Active',
+        },
+        {
+            'number': 3,
+            'recipient': '小明',
+            'type' : 'Periodic',
+            'description': 'S$6,000 every year',
+            'total': 'S$60,000',
+            'paid_out': 'S$12,000',
+            'remaining_to_pay': 'S$48,000',
+            'status': 'Pending Approval',
+        },
+    ]
     context = {
         'summary' : {'Created' : '25 Feb 2018',
                      'Gifts Made': '2',
@@ -107,6 +139,7 @@ def contractDetail(request):
                      'Protector Supervision': 'Approval Only',
                      'SIAC Supervision': 'Revise Only',
                     },
+        'gifts'  : gifts,
         'powers' : ['Revoke', 'Request Protector Review','Request SIAC Review']
 
     }

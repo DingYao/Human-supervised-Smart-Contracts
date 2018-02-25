@@ -22,6 +22,34 @@
 </div>
 <div class='mui-panel' id=>
 	<legend>Manage Gifts</legend>
+    <table class="mui-table">
+      <thead>
+        <tr>
+          <th>Number</th>
+          <th>Recipient</th>
+          <th>Type </th>
+          <th>Description</th>
+          <th>Total</th>
+          <th>Paid Out</th>
+          <th>Remaining to Pay</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+    		{% for gift in gifts %}
+    			<tr>
+            <td>{{ gift.number }}</td>
+            <td>{{ gift.recipient }}</td>
+            <td>{{ gift.type }}</td>
+            <td>{{ gift.description }}</td>
+            <td>{{ gift.total }}</td>
+            <td>{{ gift.paid_out }}</td>
+            <td>{{ gift.remaining_to_pay }}</td>
+            <td>{{ gift.status }}</td>
+    			</tr>
+    		{% endfor %}
+      </tbody>
+    </table>
 
 </div>
 <div class='mui-panel' id=>
