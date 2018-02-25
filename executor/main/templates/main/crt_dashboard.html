@@ -1,13 +1,15 @@
 {% extends 'main/base_dashboard.html' %}
 
 {% block title %}
-<h3>Welcome, User u0238.</h3>
+<h3>Welcome, Mr. Arbitrator.</h3>
 {% endblock %}
 
 {% block notifs %}
 {% for notif in user.notifications %}
 <button class="mui-btn mui-btn--primary" id='notif'>{{ notif }}...</button>
 {% endfor %}
+<br />
+<a id="seemore">See More...</a>
 {% endblock %}
 {% block quick-actions %}
 {% for action in user.actions %}
@@ -15,6 +17,6 @@
 {% endfor %}
 {% endblock %}
 {% block contract_list %}
-<legend>Your Contracts</legend>
+<legend>Contracts under SIAC Review</legend>
 
 {% endblock %}

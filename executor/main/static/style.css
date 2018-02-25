@@ -12,12 +12,13 @@ Lightest Grey for BG: rgba(242,242,242);
 
 **/
 
-h1, h2, h3, h4, h5, p {
+h1, h2, h3, h4, h5, p, legend {
 	color: #858585;
 	font-family: 'Roboto','Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 body {
+	font-family: 'Roboto','Helvetica Neue', Helvetica, Arial, sans-serif;
 	margin: 0px;
 	padding: 15px;
 	background-color: rgba(242,242,242,1);
@@ -25,10 +26,13 @@ body {
 
 a {
 	color: #2F5597;
+	text-decoration: none;
+	font-weight: bold;
 }
 
 a:hover {
 	color: #3F73CC;
+	cursor: pointer;
 }
 
 legend {
@@ -58,22 +62,22 @@ legend {
 .notifs-left {
 	position: absolute;
 	top: 150px;
-	width: 55%;
-	min-height: 300px;
+	width: 60%;
+	height: 300px;
 
 }
 
 .notifs-right {
 	position: absolute;
 	top: 150px;
-	left: 67.5%;
-	width: 25%;
-	min-height: 300px;
+	left: 72.5%;
+	width: 20%;
+	height: 300px;
 }
 
 .contracts-list {
 	position: absolute;
-	top: 600px;
+	top: 550px;
 	min-height: 300px;
 	width: 84.5%;
 	display: inline-block;
@@ -83,12 +87,37 @@ legend {
     margin-left: 0px;
 }
 
+.mui-btn--danger {
+    margin-top: 9px;
+}
+
 #notif {
 	text-transform: none;
-	text-align:left;
+	width: 100%;
+	background-color: #2F5597;
 }
+#notif:hover {
+	background-color: #3F73CC;
+}
+
 
 #action {
 	display:block;
 	clear:both;
+	height: 36px;
+	width:100%;
+	background-color: #8DB22F;
+}
+#action:hover {
+	background-color: rgba(141,178,41,0.72);
+}
+
+
+#seemore {
+	position: absolute;
+	bottom: 10px;
+}
+
+#contractSummary td {
+	
 }

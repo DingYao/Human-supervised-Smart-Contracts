@@ -1,21 +1,26 @@
 {% extends 'main/base_dashboard.html' %}
 {% block title %}
-<h3>Welcome, Protector asxa3sqe01931aanesq321adasda!</h3>
+<h3>Welcome, Protector asxa3.</h3>
 {% endblock %}
 
 
 {% block notifs %}
-<h4>Your Notifications</h4>
-<button class="mui-btn mui-btn--primary" style="width:100%">A contract requires your specific approval to disburse $100.</button>
-<button class="mui-btn" style="width:100%; margin-left:0">A contract has been revoked by the creator. No further action necessary.
+<button class="mui-btn mui-btn--primary" id='notif'>Contract 2h988 requires your specific approval to disburse $100</button>
+<button class="mui-btn mui-btn--primary" id='notif'>Contract ux013 has requested that you review it
 </button>
-<button class="mui-btn mui-btn--primary" style="width:100%; margin-left:0">A contract has requested that you review it.
+<button class="mui-btn mui-btn--primary" id='notif'>Contract 213a3 been revoked by the creator. No further action necessary
 </button>
-<button class="mui-btn" style="width:100%; margin-left:0">A contract has been suspend for Court Review. No further action necessary.
+<button class="mui-btn mui-btn--primary" id='notif'>Contract aalio has been suspended for Court Review. No further action is necessary
 </button>
+<button class="mui-btn mui-btn--primary" id='notif'>Contract 531ab has been suspended for Court Review. No further action is necessary
+</button>
+<a id="seemore">See More...</a>
 {% endblock %}
 {% block quick-actions %}
-<h4>Quick Actions</h4>
+<legend>Contracts I'm Protecting</legend>
+{% for action in user.actions %}
+<button class="mui-btn mui-btn--danger" id='action'>{{ action }}</button>
+{% endfor %}
 {% endblock %}
 {% block contract_list %}
 <table class="mui-table">

@@ -1,0 +1,32 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+<h3>Smart Will at address jordan13x13158asdbq213085667</h3>
+{% endblock %}
+{% block content %}
+<div class='mui-panel' id=>
+	<legend>Summary</legend>
+	<table class='mui-table', style="width: 33%">
+    <colgroup>
+       <col span="1" style="width: 67%;">
+       <col span="1" style="width: 33%;">
+    </colgroup
+	{% for k, v in summary.items %}
+	<tr>
+		<td>{{ k }}</td>
+		<td>{{ v }}</td>
+	</tr>
+	{% endfor %}
+
+	</table>
+</div>
+<div class='mui-panel' id=>
+	<legend>Manage Gifts</legend>
+
+</div>
+<div class='mui-panel' id=>
+	<legend>General Powers You Can Exercise</legend>
+	
+
+</div>
+{% endblock %}
