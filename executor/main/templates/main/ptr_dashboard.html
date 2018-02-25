@@ -17,12 +17,12 @@
 <a id="seemore">See More...</a>
 {% endblock %}
 {% block quick-actions %}
-<legend>Contracts I'm Protecting</legend>
 {% for action in user.actions %}
 <button class="mui-btn mui-btn--danger" id='action'>{{ action }}</button>
 {% endfor %}
 {% endblock %}
 {% block contract_list %}
+<legend>Contracts I'm Protecting</legend>
 <table class="mui-table">
   <thead>
     <tr>

@@ -1,1 +1,8 @@
-{{object_passed_to_template.key}}
+{% extends 'main/base.html' %}
+{% block content %}
+<div id='index-container'>
+	<img src='/static/ptr-logo-index.png' alt='/static/ptr-logo-index.png' />
+	<h3>We create simple, human-protected smart contracts that are both <br /> secure and sensitive to your needs.</h3>
+	<a href="/user/dashboard"><button class="mui-btn mui-btn--primary">Get Started</button></a>
+</div>
+{% endblock %}
